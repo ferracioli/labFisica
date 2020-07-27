@@ -65,10 +65,13 @@ void calculaMedia() {
     
     // Cálculo do desvio padrão
     float somaPadrao = 0;
-    for(int i = 0; i < N; i++)
-        somaPadrao+=(vetor[i] - vMedio)*(vetor[i] - vMedio);
-    double valorAtual = somaPadrao/N-1;
-    printf("Desvio padrão : %.8lf\n", sqrt(valorAtual));
+    for(int i = 0; i < N; i++) {
+        float quadrado = vetor[i] - vMedio;
+        somaPadrao+=quadrado*quadrado;
+    }
+    double raiz = somaPadrao/(N-1);
+    printf("Sqrt = %lf\n", sqrt(raiz));
+    printf("Desvio padrão : sqrt(%.8f)\n", somaPadrao/(N-1));
 
     int pi;
     printf("-----------------------------------\nDigite algum número para reiniciar\n");
