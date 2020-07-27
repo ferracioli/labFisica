@@ -69,9 +69,7 @@ void calculaMedia() {
         float quadrado = vetor[i] - vMedio;
         somaPadrao+=quadrado*quadrado;
     }
-    double raiz = somaPadrao/(N-1);
-    printf("Sqrt = %lf\n", sqrt(raiz));
-    printf("Desvio padrão : sqrt(%.8f)\n", somaPadrao/(N-1));
+    printf("Desvio padrão : raiz de %.8f\n", somaPadrao/(N-1));
 
     int pi;
     printf("-----------------------------------\nDigite algum número para reiniciar\n");
